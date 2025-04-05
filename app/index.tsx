@@ -22,6 +22,10 @@ const Calculator = () => {
                 if (input == "666") {
                     router.push("./tictactoe");
                 }
+                else if(input == "108"){
+                    router.push("./hangman");
+                }
+
             } catch {
                 setInput("Error");
             }
