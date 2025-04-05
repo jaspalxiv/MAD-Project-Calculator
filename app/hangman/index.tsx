@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { View, Text, TouchableOpacity, StyleSheet, Dimensions } from "react-native";
 import { useRouter } from "expo-router";
-
+import words from "./words.json";
 const { width } = Dimensions.get("window");
 
-const words = ["HELLO", "WORLD", "REACT", "NATIVE"];
-const getRandomWord = () => words[Math.floor(Math.random() * words.length)];
+//const words = ["HELLO", "WORLD", "REACT", "NATIVE"];
+const getRandomWord = () => words[Math.floor(Math.random() * words.length)].toUpperCase();
 
 const Hangman = () => {
   const router = useRouter();
