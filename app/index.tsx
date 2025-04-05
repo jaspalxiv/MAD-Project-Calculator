@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { StyleSheet, View, Text, TouchableOpacity, Dimensions } from "react-native";
-
 import { useRouter } from "expo-router";
 const { width, height } = Dimensions.get("window");
 
 const Calculator = () => {
     const router = useRouter();
+
     const [input, setInput] = useState<string>("");
 
     const handleButtonClick = (value: string) => {
@@ -19,13 +19,15 @@ const Calculator = () => {
             try {
                 setInput(eval(input).toString());
 
-                if (input == "666") {
+                if(input == "666"){
                     router.push("./tictactoe");
                 }
                 else if(input == "108"){
                     router.push("./hangman");
                 }
-
+                else if(input == "1111"){
+                    router.push("./snake");
+                }
             } catch {
                 setInput("Error");
             }
