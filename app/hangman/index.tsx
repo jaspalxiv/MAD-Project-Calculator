@@ -48,7 +48,7 @@ const Hangman = () => {
   };
  
   const renderAlphabet = () => {
-    if (incorrectGuesses >= 7) return null;
+    if (incorrectGuesses >= 6) return null;
  
     return "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map((letter) => (
       <TouchableOpacity
@@ -74,7 +74,7 @@ const Hangman = () => {
   };
  
   const renderHangman = () => {
-    if (incorrectGuesses >= 7) {
+    if (incorrectGuesses >= 6) {
       return (
         <Image
           source={hangmanImages[6]}
@@ -92,7 +92,7 @@ const Hangman = () => {
   };
  
   const renderGameOver = () => {
-    if (incorrectGuesses < 7) return null;
+    if (incorrectGuesses < 6) return null;
  
     return (
       <View style={styles.gameOverContainer}>
